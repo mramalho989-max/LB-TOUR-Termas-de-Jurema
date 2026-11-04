@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça Jurema Águas Quentes e planeje sua hospedagem.">
+  <title>Jurema Águas Quentes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="tema-jurema">
+
+  <a class="atalho" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <a class="marca" href="#inicio" aria-label="Jurema Águas Quentes">
+      <span class="icone-marca" aria-hidden="true"></span>
+      <span>JUREMA<small>ÁGUAS QUENTES</small></span>
+    </a>
+
+    <button
+      class="alternar-menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="navegacao"
+    >
+      Menu <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav id="navegacao" aria-label="Navegação principal">
+      <a href="#essencia">Nossa essência</a>
+      <a href="#complexos">Complexos</a>
+      <a href="#planejar">Hospedagem</a>
+      <a class="botao pequeno" href="#planejar">
+        Solicitar orçamento
+      </a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- CAPA PRINCIPAL -->
+    <section class="capa" id="inicio">
+      <div class="conteudo-capa">
+        <p class="rotulo">JUREMA ÁGUAS QUENTES</p>
+
+        <h1>Sua próxima pausa começa aqui.</h1>
+
+        <p>
+          Conheça nossos complexos e planeje sua estadia.
+        </p>
+
+        <a class="botao claro" href="#planejar">
+          Solicitar orçamento
+        </a>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="planejamento largura-conteudo" id="planejar">
+      <p class="rotulo">RESERVAS</p>
+      <h2>Solicitar orçamento</h2>
+
+      <form id="formulario-planejamento">
+
+        <fieldset class="selecao-hospedagem">
+          <legend>Escolha seu local de hospedagem</legend>
+
+          <div class="opcoes-hospedagem">
+
+            <label class="opcao-hospedagem">
+              <input
+                type="radio"
+                name="resort"
+                value="jardins"
+                checked
+                required
+              >
+              <span><strong>Jardins de Jurema</strong></span>
+            </label>
+
+            <label class="opcao-hospedagem">
+              <input
+                type="radio"
+                name="resort"
+                value="lagos"
+              >
+              <span><strong>Lagos de Jurema</strong></span>
+            </label>
+
+            <label class="opcao-hospedagem">
+              <input
+                type="radio"
+                name="resort"
+                value="casa-imperial"
+              >
+              <span><strong>Casa Imperial</strong></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label>
+          Acomodação
+          <select id="acomodacao">
+            <option value="">Selecione uma acomodação</option>
+          </select>
+        </label>
+
+        <label>
+          Chegada
+          <input id="data-chegada" type="date" required>
+        </label>
+
+        <label>
+          Saída
+          <input id="data-saida" type="date" required>
+        </label>
+
+        <label>
+          Adultos
+          <select id="hospedes">
+            <option value="1">1 adulto</option>
+            <option value="2" selected>2 adultos</option>
+            <option value="3">3 adultos</option>
+            <option value="4">4 adultos</option>
+            <option value="5">5 adultos</option>
+            <option value="6">6 adultos</option>
+            <option value="7">7 adultos</option>
+            <option value="8">8 adultos</option>
+          </select>
+        </label>
+
+        <label>
+          Crianças
+          <select id="criancas">
+            <option value="0">Nenhuma</option>
+            <option value="1">1 criança</option>
+            <option value="2">2 crianças</option>
+            <option value="3">3 crianças</option>
+            <option value="4">4 crianças</option>
+            <option value="5">5 crianças</option>
+            <option value="6">6 crianças</option>
+            <option value="7">7 crianças</option>
+            <option value="8">8 crianças</option>
+          </select>
+        </label>
+
+        <!-- IDADES DINÂMICAS -->
+        <div class="idades-criancas" id="idades-criancas" hidden>
+          <div class="idades-cabecalho">
+            <strong>Qual a idade de cada criança?</strong>
+            <span>
+              Informe a idade que cada uma terá no check-in.
+            </span>
+          </div>
+
+          <div id="campos-idades" class="grade-idades"></div>
+        </div>
+
+        <button class="botao" type="submit">
+          Solicitar orçamento 
+        </button>
+      </form>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="apresentacao largura-conteudo secao" id="essencia">
+
+      <div class="foto-apresentacao">
+        <img
+          src="imagens/jurema-aguas-quentes/resortjurema.png"
+          alt="Jurema Águas Quentes"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="texto-apresentacao">
+        <p class="rotulo">CONHEÇA JUREMA</p>
+
+        <h2>Natureza e descanso</h2>
+
+        <p>
+          Três experiências completas para descansar,
+          celebrar e aproveitar bons momentos em família.
+        </p>
+
+        <a class="link-texto" href="#complexos">
+          Conheça os complexos ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- COMPLEXOS -->
+    <section class="secao largura-conteudo" id="complexos">
+
+      <div class="titulo-secao">
+        <div>
+          <p class="rotulo">NOSSOS COMPLEXOS</p>
+          <h2>Escolha seu destino.</h2>
+        </div>
+
+        <p>
+          Conheça os ambientes e espaços de lazer
+          de cada complexo.
+        </p>
+      </div>
+
+      <div class="grade-experiencias">
+
+        <!-- FOTO DA CASA IMPERIAL -->
+        <article class="experiencia experiencia-destaque">
+          <div class="experiencia-foto">
+            <img
+              src="imagens/jurema-aguas-quentes/banner-casa-imperial.png"
+              alt="Casa Imperial Jurema"
+              loading="eager"
+            >
+          </div>
+
+          <div>
+            <h3>CASA IMPERIAL</h3>
+
+            <p>
+              Uma experiência exclusiva, elegante e acolhedora
+              para celebrações especiais em família.
+            </p>
+
+            <a class="link-texto" href="index.html?resort=casa-imperial&origem=casa-imperial#planejar">
+              Solicitar hospedagem ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- FOTO DO JARDINS -->
+        <article class="experiencia">
+          <div class="experiencia-foto">
+            <img
+              src="imagens/jardins-de-jurema/aereo-jardim.png"
+              alt="Foto do Jardins de Jurema"
+              loading="lazy"
+            >
+          </div>
+
+          <div>
+            <h3>JARDINS DE JUREMA</h3>
+
+            <p>
+              Conheça a estrutura, os espaços de lazer
+              e as acomodações do complexo.
+            </p>
+
+            <a class="link-texto" href="jardins-de-jurema.html">
+              Conhecer Jardins ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- FOTO DO LAGOS -->
+        <article class="experiencia">
+          <div class="experiencia-foto">
+            <img
+              src="imagens/lagos-de-jurema/aereo-piscina.png"
+              alt="Foto do Lagos de Jurema"
+              loading="lazy"
+            >
+          </div>
+
+          <div>
+            <h3>LAGOS DE JUREMA</h3>
+
+            <p>
+              Explore as acomodações, os ambientes
+              e as opções de lazer.
+            </p>
+
+            <a class="link-texto" href="lagos-de-jurema.html">
+              Conhecer Lagos ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+
+    <div class="largura-conteudo rodape-grade">
+
+      <div class="rodape-marca">
+        <a class="marca" href="#inicio">
+          <img
+            src="imagens/logos/logo-branca.png"
+            alt="Logo Jurema Águas Quentes"
+          >
+        </a>
+        <p>Descubra sua próxima estadia.</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h2>Navegação rápida</h2>
+        <a href="#inicio">Home</a>
+        <a href="#essencia">Sobre nós</a>
+        <a href="#complexos">Acomodações</a>
+        <a href="#planejar">Planejar estadia</a>
+        <a href="#inicio">Contato</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h2>Suporte e ajuda</h2>
+        <a href="https://wa.me/551732811500" target="_blank" rel="noopener noreferrer">Central de ajuda</a>
+        <a href="https://wa.me/551732811500" target="_blank" rel="noopener noreferrer">Dúvidas sobre reservas</a>
+        <a href="https://wa.me/551732811500" target="_blank" rel="noopener noreferrer">Políticas da reserva</a>
+        <a href="#planejar">Solicitar orçamento</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h2>Contato e localização</h2>
+        <p>
+          Av. Doutor Andrade e Silva, 994 A<br>
+          Olímpia — SP
+        </p>
+        <a href="https://wa.me/551732811500" target="_blank" rel="noopener noreferrer">(17) 3281-1500</a>
+        <div class="redes-sociais">
+          <a class="rede-social rede-social-instagram" href="https://www.instagram.com/lbtour/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="imagens/logos/instagram.svg" alt="">
+          </a>
+          <a class="rede-social rede-social-facebook" href="https://www.facebook.com/agencialbtour/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="imagens/logos/facebook.svg" alt="">
+          </a>
+          <a class="rede-social rede-social-whatsapp" href="https://wa.me/551732811500" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="imagens/logos/whatsapp.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="largura-conteudo rodape-inferior">
+      <span>
+        © <span id="ano"></span> Jurema Águas Quentes
+      </span>
+
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <!-- MODAL WHATSAPP -->
+  <dialog id="janela-modal" aria-labelledby="titulo-modal">
+
+    <button
+      type="button"
+      class="fechar-modal"
+      aria-label="Fechar janela"
+    >×</button>
+
+    <p class="rotulo">RESERVAS JUREMA</p>
+
+    <h2 id="titulo-modal">Resumo da estadia</h2>
+
+    <p id="texto-modal"></p>
+    <p id="aviso-modal" class="aviso"></p>
+
+    <div class="modal-acoes">
+      <a
+        id="enviar-whatsapp"
+        class="botao"
+        href="https://wa.me/551732811500"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Enviar pelo WhatsApp ↗
+      </a>
+    </div>
+
+    <p id="estado-copia" role="status"></p>
+  </dialog>
+</body>
+</html>
